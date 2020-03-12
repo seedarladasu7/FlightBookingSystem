@@ -29,14 +29,6 @@ public class FlightBookingSystemController {
 		List<FlightAvailability> flights = null;
 		List<FlightBookingInfoResponse> info = new ArrayList<>();
 
-		for (int i = 0; i < 3; i++) {
-
-			FlightBookingInfoResponse bookingInfo = new FlightBookingInfoResponse();
-			bookingInfo.setFlightName("AirAsia");
-
-			info.add(bookingInfo);
-		}
-
 		if (request.getSearchWithDate().equalsIgnoreCase("YES")) {
 			flights = searchFlightsRepository.findBySourceLocAndDestinationLocAndJourneyDate(request.getSource(),
 					request.getDestination(), request.getJourneyDate());
@@ -47,12 +39,12 @@ public class FlightBookingSystemController {
 		
 		List<SearchFlightsResponse> respList = new ArrayList<>();
 		
-		for(FlightAvailability fAvai : flights) {
-			
-			SearchFlightsResponse resp = new SearchFlightsResponse();
-			
+		for(FlightAvailability fAvai : flights) {			
+			SearchFlightsResponse resp = new SearchFlightsResponse();			
 			String flightName = fAvai.getFlight().getName();
-			resp.setFlightName(flightName);
+			resp.setFlightName(flightName);			
+			resp.setDate(fAvai.getJourneyDate());
+			resp.setTime(fAvai.getJourneyTime());
 			
 			respList.add(resp);
 			

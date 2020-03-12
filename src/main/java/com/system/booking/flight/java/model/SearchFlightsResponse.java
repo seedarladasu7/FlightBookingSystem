@@ -1,8 +1,13 @@
 package com.system.booking.flight.java.model;
 
+import java.sql.Date;
+import java.sql.Time;
+
 public class SearchFlightsResponse {
 	
 	private String flightName;
+	private Date date;
+	private Time time;
 
 	public String getFlightName() {
 		return flightName;
@@ -11,6 +16,24 @@ public class SearchFlightsResponse {
 	public void setFlightName(String flightName) {
 		this.flightName = flightName;
 	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
+	public Time getTime() {
+		return time;
+	}
+
+	public void setTime(Time time) {
+		this.time = time;
+	}
+	
+	
 	
 
 }
