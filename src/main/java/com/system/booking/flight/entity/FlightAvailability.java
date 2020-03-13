@@ -1,4 +1,4 @@
-package com.system.booking.flight.java.model;
+package com.system.booking.flight.entity;
 
 import java.sql.Date;
 import java.sql.Time;
@@ -40,15 +40,6 @@ public class FlightAvailability {
 	@JsonBackReference
 	private Flight flight;
 	
-	public FlightAvailability() {}
-			
-	public FlightAvailability(int id, Date journeyDate, String sourceLoc, String destinationLoc) {
-		this.id = id;
-		this.journeyDate = journeyDate;
-		this.sourceLoc = sourceLoc;
-		this.destinationLoc = destinationLoc;
-	}
-
 	public int getId() {
 		return id;
 	}
@@ -95,11 +86,6 @@ public class FlightAvailability {
 
 	public void setFlight(Flight flight) {
 		this.flight = flight;
-	}
-
-	@Override
-	public String toString() {
-		return "FlightAvailability [id=" + id + ", journeyDate=" + journeyDate + ", sourceLoc=" + sourceLoc + ", destinationLoc=" + destinationLoc + "]";
 	}
 	
 }

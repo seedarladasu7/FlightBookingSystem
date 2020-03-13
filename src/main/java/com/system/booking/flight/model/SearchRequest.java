@@ -1,4 +1,4 @@
-package com.system.booking.flight.java.model;
+package com.system.booking.flight.model;
 
 import java.sql.Date;
 

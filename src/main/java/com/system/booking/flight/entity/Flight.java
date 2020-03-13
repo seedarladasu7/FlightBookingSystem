@@ -1,4 +1,4 @@
-package com.system.booking.flight.java.model;
+package com.system.booking.flight.entity;
 
 import java.util.Set;
 
@@ -28,13 +28,6 @@ public class Flight {
 	@JsonManagedReference
 	private Set<FlightAvailability> flightAvailability;
 	
-	public Flight() {}
-			
-	public Flight(int id, String name) {
-		this.id = id;
-		this.name = name;
-	}
-
 	public int getId() {
 		return id;
 	}
@@ -58,10 +51,4 @@ public class Flight {
 	public void setFlightAvailability(Set<FlightAvailability> flightAvailability) {
 		this.flightAvailability = flightAvailability;
 	}
-
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", name=" + name + "]";
-	}
-
 }

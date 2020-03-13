@@ -1,7 +1,9 @@
-package com.system.booking.flight.java.model;
+package com.system.booking.flight.model;
 
 import java.sql.Date;
 import java.util.List;
+
+import com.system.booking.flight.entity.Passenger;
 
 public class BookingForPassengersResposne {
 	

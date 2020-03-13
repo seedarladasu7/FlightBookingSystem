@@ -1,4 +1,4 @@
-package com.system.booking.flight.java.model;
+package com.system.booking.flight.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -22,14 +22,6 @@ public class BookingPassenger {
 	@Column(name = "passenger_id")
 	private int passengerId;
 	
-	public BookingPassenger() {}
-
-	public BookingPassenger(int id, int bookingId, int passengerId) {
-		this.id = id;
-		this.bookingId = bookingId;
-		this.passengerId = passengerId;
-	}
-
 	public int getId() {
 		return id;
 	}

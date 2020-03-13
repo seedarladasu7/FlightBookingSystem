@@ -1,9 +1,9 @@
-package com.system.booking.flight.java.model;
+package com.system.booking.flight.dto;
 
 import java.sql.Date;
 import java.sql.Time;
 
-public class SearchFlightsResponse {
+public class FlightsDTO {
 	
 	private String flightName;
 	private Date date;

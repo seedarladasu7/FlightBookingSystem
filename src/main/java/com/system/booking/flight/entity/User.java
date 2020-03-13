@@ -1,4 +1,4 @@
-package com.system.booking.flight.java.model;
+package com.system.booking.flight.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,24 +8,20 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="location")
-public class Location {
+@Table(name="user")
+public class User {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "id")
+	@Column(name = "userid")
 	private int id;
 	
 	@Column(name = "name")
 	private String name;
 	
-	public Location() {}
-			
-	public Location(int id, String name) {
-		this.id = id;
-		this.name = name;
-	}
-
+	@Column(name = "password")
+	private String password;
+	
 	public int getId() {
 		return id;
 	}
@@ -42,9 +38,12 @@ public class Location {
 		this.name = name;
 	}
 
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", name=" + name + "]";
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 }
